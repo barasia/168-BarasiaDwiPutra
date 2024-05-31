@@ -14,14 +14,15 @@ class Problem extends Model
             SELECT
                 p.*,
                 u.name AS user,
-                a.name AS assignment
+                a.name AS assignment,
+                u.division
 
             FROM
                 problem AS p
-                LEFT JOIN user AS u ON u.id = p.id_user
-                LEFT JOIN user AS a ON a.id = p.id_assignment
+                LEFT JOIN users AS u ON u.id = p.id_user
+                LEFT JOIN users AS a ON a.id = p.id_assignment
         ";
-        $db = DB::select(DB::raw($sql));
+        $db = DB::select($sql);
 
         return $db;
     }

@@ -26,9 +26,9 @@
                                 <div class="d-flex align-items-center h-100-vh">
 
                                     <div class="login p-50">
-                                        <img src="assets/gajelas.png" alt="Helpdesk" width="200px" class="mb-2">
+                                        <a href="{{ route('rHome') }}"><img src="assets/gajelas.png" alt="Helpdesk" width="200px" class="mb-2"></a>
                                         <p>Please register your account</p>
-                                        <form method="POST" action="/register" class="mt-3 mt-sm-5">
+                                        <form method="POST" action="{{ route('rRegister') }}" class="mt-3 mt-sm-5">
                                             <input type="hidden" name="_token" value="4ZQNXHnIlScSCkGFUVoKBXFQBenvGZMeEmWD1UEw">
                                             <div class="row">
                                                 <div class="col-12">
@@ -47,10 +47,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-12 mt-3">
-                                                    <button type="submit" href="index.html" class="btn btn-primary text-uppercase">Register</button>
+                                                    <button type="submit" class="btn btn-primary text-uppercase">Register</button>
                                                 </div>
                                                 <div class="col-12  mt-3">
-                                                    <p>Already have an account ?<a href="/login"> Login</a></p>
+                                                    <p>Already have an account ?<a href="{{ route('rLogin') }}"> Login</a></p>
                                                 </div>
                                             </div>
                                         </form>

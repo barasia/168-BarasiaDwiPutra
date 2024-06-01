@@ -19,6 +19,12 @@
     <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
 
     <style>
+        .required:after {
+            content: '*';
+            color: red;
+            padding-left: 5px;
+        }
+
         .dot {
             display: inline-block;
             border-radius: 50%;
@@ -56,6 +62,7 @@
 <body>
     <header>
         <nav>
+            <div><img src="assets/gajelas.png" alt="Helpdesk" width="200px" class="mb-2"></div>
             <a href="{{ route('rLogin') }}" class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
                 Log in
             </a>
@@ -67,7 +74,7 @@
         </nav>
     </header>
 
-    <div class="app-container" style="margin-top:60px;">
+    <div class="app-container">
         <!-- begin container-fluid -->
         <div class="container-fluid py-4">
 
@@ -140,7 +147,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="row justify-content-center">
                 <div class="col-12">
                     <div class="card">
